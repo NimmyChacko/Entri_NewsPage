@@ -1,0 +1,167 @@
+@import url('https://fonts.google.com/specimen/Inter');
+:root{
+    --dark-grayish-blue:hsl(236, 13%, 42%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Soft-orange: hsl(35, 77%, 62%);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter";
+}
+
+.container{
+    margin:0 auto;
+    max-width:1240px;
+    padding:0 30px;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 0px;
+    animation:1s ease-in 0.5s TopSlide;
+}
+@keyframes TopSlide{
+  0%{
+    transform: translateY(-30px) scale(0.9);
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0px) scale(1);
+  }
+}
+.links ul{
+    display: flex;
+    gap:1rem;
+}
+
+.links ul li{
+    list-style: none;
+   
+}
+.links ul a{
+    text-decoration: none;
+    color:var(--dark-grayish-blue)
+}
+.links ul li a:hover{
+    color:var(--Soft-red);
+    transition: 0.5s color ease;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:2rem;
+}
+.new_articles {
+    background-color:hsl(240, 100%, 5%) ;
+    font-family: 'Inter', sans-serif;
+    color: hsl(36, 100%, 99%);
+    padding: 1em;
+    animation:1s ease-in 0.5s RightSlide;
+  }
+  @keyframes RightSlide{
+    0%{
+      transform: translateX(100px) scale(0.9);
+      opacity:0;
+    }
+    100%{
+      opacity:1;
+      transform:translateX(0px) scale(1);
+    }
+  }
+  .heading {
+    font-size:2.5em ;
+    margin-top: 7px;
+    color:var(--Soft-orange) ;
+  }
+  .article {margin:25px 5px;}
+
+.article a{
+  color: hsl(36, 100%, 99%);
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: inline-block;
+ transition:color 0.5s ease;
+ 
+}
+.article a:hover{
+color:var(--Soft-orange);
+}
+.article p{
+  color:hsl(233,8%,79%);
+}
+.hero_text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+.hero_text h1{
+    font-size:3rem;
+font-weight:800
+}
+.button {
+    background-color:hsl(5, 85%, 63%) ;
+    padding: 1em 1.5em;
+    display: inline-block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: hsl(36, 100%, 99%) ;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    transition:background-color 0.5s ease;
+   
+  }
+  .button:hover{
+    background-color: hsl(240, 100%, 5%);
+  }
+
+  .call_out p{
+    color:hsl(236, 13%, 42%);
+    line-height: 1.5;
+  }
+  .articles{
+    display:flex;
+    gap:1rem;
+    margin:4rem 0;
+
+  }
+  .new_article{
+    display:flex;
+    gap:1rem;
+  }
+
+  .new_article content{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .new_article img{
+    max-width:120px;
+}
+.content h2 {
+    color: hsl(233, 8%, 79%);
+    font-size: 2em;
+  
+  }
+  .content h2:hover{
+color: var(--Soft-orange);
+  }
+
+  @media  screen and (max-width:800px) {
+    .hero{
+      grid-template-columns: 1fr;
+    }
+    .articles{
+      flex-direction: column;
+    }
+  }
